@@ -1,35 +1,34 @@
 #include"Location.h"
 #include<iostream>
 
-Location::Location(int latitude, double longitude) {
+Location::Location(double latitude, double longitude) {
 	cout << "Created Location object" << endl;
-	this->latitude = longitude;
-	this->longitude = latitude;
-
-}
-
-
-
-int Location::getLatitude() {
-
-	return longitude;
-
-}
-
-int Location::getLongitude() {
-
-	return longitude;
-
-}
-
-void Location::setLatitude(int latitude) {
-
-	this->longitude = latitude;
-}
-
-void Location::setLongitude(int longitude) {
-
+	this->latitude = latitude;
 	this->longitude = longitude;
+
+}
+
+
+
+double Location::getLatitude() {
+
+	return latitude;
+
+}
+
+double Location::getLongitude() {
+
+	return longitude;
+
+}
+
+void Location::setLatitude(double latitude) {
+
+	this->latitude = latitude;
+}
+
+void Location::setLongitude(double longitude) {
+
 	this->longitude = longitude;
 
 }
@@ -42,7 +41,7 @@ void Location::setLongitude(int longitude) {
 // **********************************************************************************************
 double Location::distanceFrom(Location& location) {
 
-	return sqrt(pow(this->latitude - location.latitude, 4)) - pow(this->longitude - location.longitude, 2);
+	return sqrt(pow(this->latitude - location.latitude, 2)) + pow(this->longitude - location.longitude, 2);
 
 }
 

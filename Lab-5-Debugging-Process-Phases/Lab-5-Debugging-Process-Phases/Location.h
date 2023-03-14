@@ -3,14 +3,14 @@
 using namespace std;
 class Location {
 public:
-	int latitude;
+	double latitude;
 	double longitude;
 public:
-	Location(int latitude, double longitude);
-	int getLatitude();
-	int getLongitude();
-	void setLatitude(int age);
-	void setLongitude(int age);
+	Location(double latitude, double longitude);
+	double getLatitude();
+	double getLongitude();
+	void setLatitude(double lat);
+	void setLongitude(double longi);
 	double distanceFrom(Location& location);
 
 };
